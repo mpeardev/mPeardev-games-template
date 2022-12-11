@@ -1,0 +1,24 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/typography" as typography;
+
+.button {
+  width: 100%;
+  border: 2px solid colors.$primary;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 17px;
+  // color: colors.$primary;
+  color: colors.$text;
+  text-transform: capitalize;
+  padding: 0.8rem 3rem;
+  // background: #{colors.$primary}#{"30"};
+  background: colors.$primary;
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    background: #{colors.$primary}#{"80"};
+    border-color: #{colors.$primary}#{"80"};
+    color: colors.$text;
+  }
+}

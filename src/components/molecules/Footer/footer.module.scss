@@ -1,0 +1,10 @@
+@use "/src/styles/base/utilities";
+@use "/src/styles/base/colors";
+
+.footer {
+  width: 100%;
+  height: 8rem;
+  // background: #{colors.$secondary}#{"de"};
+  padding: 1.5rem 2%;
+  @include utilities.flexbox-params(flex, center, center);
+}

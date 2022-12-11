@@ -1,0 +1,60 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/typography" as typography;
+
+.home {
+  width: 100%;
+  height: 100vh;
+  min-height: 768px;
+  position: relative;
+  &__content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+    color: colors.$text;
+    @include utilities.flexbox-params(flex, center, center);
+    & h4 {
+      margin-top: 1rem;
+    }
+    &Social {
+      width: 100%;
+      max-width: 35rem;
+      margin: 5rem auto 0 auto;
+      & p {
+        font-size: 13px;
+      }
+      & > div {
+        @include utilities.flexbox-params(flex, auto, auto);
+        // flex-direction: column;
+        gap: 3%;
+        margin-top: 1rem;
+      }
+    }
+  }
+  &__arrow {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    bottom: 4%;
+    @include utilities.flexbox-params(flex, center, center);
+    font-family: typography.$primary;
+    text-transform: uppercase;
+    & > div {
+      font-size: 18px;
+      @include utilities.flexbox-params(flex, center, center);
+      flex-direction: column;
+      transition: 0.4s;
+      cursor: pointer;
+      &:hover {
+        color: colors.$primary;
+      }
+    }
+  }
+}
+
+:export {
+  primary: colors.$primary;
+}
