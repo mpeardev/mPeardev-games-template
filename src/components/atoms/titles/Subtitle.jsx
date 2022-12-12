@@ -1,5 +1,9 @@
-import "./titles.scss";
+import classes from "./titles.module.scss";
 
 export function Subtitle({ subtitle = "subtitle" }) {
-  return <h2>{subtitle}</h2>;
+  return (
+    <div className={classes.title}>
+      <h2>{subtitle}</h2>
+    </div>
+  );
 }

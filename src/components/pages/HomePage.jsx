@@ -1,6 +1,6 @@
-import { Blackjack, Home, Memory } from "..";
+import { Home, GamesView } from "..";
 
-export function HomePage() {
+export function HomePage({ breakpoint }) {
   const container = {
     width: "100%",
     overflow: "hidden",
@@ -8,9 +8,8 @@ export function HomePage() {
 
   return (
     <div style={container}>
-      <Home />
-      <Blackjack />
-      <Memory />
+      <Home breakpoint={breakpoint} />
+      <GamesView breakpoint={breakpoint} />
     </div>
   );
 }

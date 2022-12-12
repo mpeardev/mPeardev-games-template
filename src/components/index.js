@@ -1,15 +1,16 @@
 /* CONTAINERS */
-export * from "./containers/Content";
+export * from "./containers/Content/Content";
 export * from "./containers/HomeGradient/HomeGradient";
 export * from "./containers/DefaultGradient/DefaultGradient";
 export * from "./containers/PageContainer";
+export * from "./containers/GamesView/GamesView";
 
 /* ATOMS */
 export * from "./atoms/titles/Title";
 export * from "./atoms/titles/SecondaryTitle";
 export * from "./atoms/titles/Subtitle";
-export * from "./atoms/buttons/HomeButton/HomeButton";
-export * from "./atoms/buttons/DefaultButton/DefaultButton";
+export * from "./atoms/buttons/PrimaryButton";
+export * from "./atoms/buttons/SecondaryButton";
 
 /* MOLECULES */
 export * from "./molecules/Footer/Footer";

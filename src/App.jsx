@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import breakpointObserver from "./config/breakpoint/breakpointObserver";
+import { breakpointObserver } from "./config/breakpoint/breakpointObserver";
 import { breakpoints } from "./config/breakpoint/breakpoints";
 import { Header, HomePage, Footer } from "./components";
 
@@ -10,10 +10,10 @@ export function App() {
     breakpointObserver(breakpoints, isBreakpoint);
   }, [breakpoint]);
   return (
-    <>
+    <div style={{ position: "relative" }}>
       <Header breakpoint={breakpoint} />
-      <HomePage />
+      <HomePage breakpoint={breakpoint} />
       <Footer />
-    </>
+    </div>
   );
 }

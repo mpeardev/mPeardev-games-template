@@ -1,8 +1,8 @@
 export const breakpoints = {
-  // xs: "(min-width:0px)", // Extra small devices (phones, 600px and down)
-  sm: "(min-width:0)", // Small devices (portrait tablets and large phones, 600px and up)
-  // md: "(min-width:768px)", // Medium devices (landscape tablets, 768px and up)
-  lg: "(min-width:992px)", // Large devices (laptops/desktops, 992px and up)
-  // xl: "(min-width: 1200px)", // Extra large devices (large laptops and desktops, 1200px and up)
-  xxl: "(min-width: 1400px)", // Super large devices (large desktops, 1400ppx and up)
+  395: "(min-width:0px)", // xs - small mobile
+  640: "(min-width: 640px", // sm - mobile
+  768: "(min-width: 768px)", // md - tablet
+  1024: "(min-width: 1024px)", // lg - laptop
+  1280: "(min-width: 1280px)", // xl - desktop
+  1536: "(min-width: 1536px)", // xxl - large desktop
 };

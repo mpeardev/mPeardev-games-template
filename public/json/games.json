@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "blackjack",
+    "category": "cartas",
+    "description": "Blackjack o veintiuno, juego de cartas simple cuyo objetivo es sumar un mayor valor próximo a 21. Ingresa dando click al boton y prueba tu suerte!",
+    "instructions": [
+      {
+        "number": 1,
+        "instruction": "Elige entre jugar solo contra la maquina o multijugador (hasta 3 jugadores)."
+      },
+      {
+        "number": 2,
+        "instruction": "Empezar una nueva ronda es tan sencillo como darle click a Nuevo Juego."
+      },
+      {
+        "number": 3,
+        "instruction": "Click en Pedir Carta para solicitar una carta a tu mano de cartas. Click en Detener para plantarte y obtener una puntuación."
+      },
+      {
+        "number": 4,
+        "instruction": "Puedes darle a Detener siempre y cuando no hayas sobrepasado el marcador de 21 para probar suerte, perderás automáticamente en caso tu mano sea mayor a 21."
+      }
+    ],
+    "mode": "multijugador",
+    "image": "/games/blackjack.jpg",
+    "imagePosition": "left"
+  },
+  {
+    "id": 2,
+    "name": "memoria",
+    "category": "juego de mesa",
+    "description": "Memoria es un juego de mesa cuyo objetivo es encontrar los pares con la misma figura. Pon a prueba tu memoria desafiándote en este juego!",
+    "instructions": [
+      {
+        "number": 1,
+        "instruction": "Elige entre jugar solo con un score de movimientos o multijugador (2 jugadores)."
+      },
+      {
+        "number": 2,
+        "instruction": "Empezar una nueva ronda es tan sencillo como darle click a Nuevo Juego."
+      },
+      {
+        "number": 3,
+        "instruction": "Puedes escoger entre 3 niveles de dificultad (fácil, medio, difícil)."
+      },
+      {
+        "number": 4,
+        "instruction": "Cuando juegas solo el objetivo es obtener el menor número de movimientos, mientras que en el modo multijugador gana quien mayor número de tarjetas tiene."
+      }
+    ],
+    "mode": "multijugador",
+    "image": "/games/memory.jpg",
+    "imagePosition": "right"
+  }
+]

@@ -2,7 +2,7 @@ import classes from "./home.module.scss";
 import colors from "./home.module.scss";
 import {
   Content,
-  HomeButton,
+  SecondaryButton,
   HomeGradient,
   PageContainer,
   Title,
@@ -10,7 +10,7 @@ import {
 } from "../..";
 import { BiDownArrow } from "react-icons/bi";
 
-export function Home() {
+export function Home({ breakpoint }) {
   return (
     <section className={classes.home}>
       <PageContainer background={"/home-bg02.jpg"}>
@@ -25,10 +25,19 @@ export function Home() {
               </div>
               <div className={classes.home__contentSocial}>
                 <p>Contacto</p>
-                <div>
-                  <HomeButton name={"linkedIn"} />
-                  <HomeButton name={"gitHub"} />
-                  <HomeButton name={"whatsApp"} />
+                <div className={classes.home__contentButtons}>
+                  <SecondaryButton
+                    name={"linkedIn"}
+                    size={breakpoint <= 640 ? "sm" : "lg"}
+                  />
+                  <SecondaryButton
+                    name={"gitHub"}
+                    size={breakpoint <= 640 ? "sm" : "lg"}
+                  />
+                  <SecondaryButton
+                    name={"whatsApp"}
+                    size={breakpoint <= 640 ? "sm" : "lg"}
+                  />
                 </div>
               </div>
             </Content>
