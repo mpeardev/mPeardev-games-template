@@ -3,7 +3,7 @@ $primary: "BebasNeue-Regular";
 
 @font-face {
   font-family: $primary;
-  src: url("../fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+  src: url("/src/styles/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 
 /* Open Sans */
@@ -13,13 +13,13 @@ $secondary30: "OpenSans-Medium";
 
 @font-face {
   font-family: $secondary10;
-  src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Light.ttf");
 }
 @font-face {
   font-family: $secondary20;
-  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Regular.ttf");
 }
 @font-face {
   font-family: $secondary30;
-  src: url("../fonts/Open_Sans/OpenSans-Medium.ttf");
+  src: url("/src/styles/fonts/Open_Sans/OpenSans-Medium.ttf");
 }
