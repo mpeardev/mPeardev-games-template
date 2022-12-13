@@ -6,56 +6,75 @@ import { useEffect, useState } from "react";
 
 export function Header({ breakpoint }) {
   const [show, setShow] = useState();
-  const [fixedScroll, setFixedScroll] = useState();
+  const [fixedHeader, setFixedHeader] = useState();
+  const [hidenHeader, setHidenHeader] = useState();
 
-  let scrollPosition = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    let scroll = scrollPosition;
-
-    scroll = window.scrollY;
-    if (scroll >= 80) {
-      setFixedScroll(true);
-    }
-    if (scroll < 80) {
-      setFixedScroll(false);
-    }
-  });
+  let scrollInitialPosition = window.scrollY;
 
   useEffect(() => {
-    if (scrollPosition >= 80) {
-      setFixedScroll(true);
+    // To Show Header
+    window.addEventListener("scroll", () => {
+      let scroll = scrollInitialPosition;
+
+      scroll = window.scrollY;
+      if (scroll >= 80) {
+        setFixedHeader(true);
+      } else if (scroll < 80) {
+        setFixedHeader(false);
+      }
+    });
+
+    // To Hide Header
+    window.onscroll = () => {
+      if (document.body.getBoundingClientRect().top > scrollInitialPosition) {
+        setHidenHeader(true);
+      } else if (
+        document.body.getBoundingClientRect().top <= scrollInitialPosition
+      ) {
+        setHidenHeader(false);
+      }
+      scrollInitialPosition = document.body.getBoundingClientRect().top;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollInitialPosition >= 80 && breakpoint <= 640) {
+      setFixedHeader(true);
     }
   }, []);
+
+  useEffect(() => {
+    if (breakpoint > 640) {
+      setShow(false);
+    }
+  }, [breakpoint]);
 
   return (
     <header
       className={classes.header}
       style={{
         background:
-          fixedScroll && !show
+          fixedHeader && !show
             ? colors.headerBgGradient
-            : show
+            : show && breakpoint
             ? colors.headerBg
             : "transparent",
-        boxShadow: fixedScroll
-          ? "0px -10px 20px 0px rgba(0, 0, 0, 0.75)"
+        boxShadow: fixedHeader
+          ? "0px -10px 25px 0px rgba(0, 0, 0, 0.75)"
           : "none",
-        backdropFilter: fixedScroll ? "blur(4px)" : "none",
-        position: fixedScroll ? "fixed" : "absolute",
+        backdropFilter: fixedHeader ? "blur(4px)" : "none",
+        position: fixedHeader || show ? "fixed" : "absolute",
+        top: fixedHeader && hidenHeader ? "-10%" : "0",
       }}
     >
       <Content>
-        <div
-          className={classes.header__container}
-          style={{ height: fixedScroll && breakpoint > 640 && "5rem" }}
-        >
+        <div className={classes.header__container}>
           <div>
             {breakpoint <= 640 && (
               <img
                 src="/icon/200x200/icon-dark.png"
                 alt="logo"
-                style={{ width: "3.8rem" }}
+                style={{ width: "3rem" }}
               />
             )}
             {breakpoint <= 1024 && breakpoint > 640 && (
@@ -76,11 +95,13 @@ export function Header({ breakpoint }) {
           <div
             className={classes.header__links}
             style={{
-              top: show ? "7rem" : "-100vh",
+              top: show ? "5rem" : "-100vh",
             }}
           >
-            <a>Home</a>
-            <a>Sobre</a>
+            <div>
+              <a>Home</a>
+              <a>Sobre</a>
+            </div>
           </div>
           <div className={classes.header__profile}>
             <div>

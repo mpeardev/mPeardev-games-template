@@ -10,13 +10,13 @@ export function Footer() {
           <img src="/logo/logo-dark.png" alt="logo" />
           <div className={classes.footer__networks}>
             <div>
-              <BsLinkedin size="1.3rem" />
+              <BsLinkedin />
             </div>
             <div>
-              <BsGithub size="1.3rem" />
+              <BsGithub />
             </div>
             <div>
-              <BsWhatsapp size="1.3rem" />
+              <BsWhatsapp />
             </div>
           </div>
         </div>

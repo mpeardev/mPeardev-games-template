@@ -9,6 +9,9 @@
   flex-direction: column;
   & img {
     width: 8rem;
+    @include breakpoints.medium {
+      width: 5.5rem;
+    }
   }
   & hr {
     width: 98%;
@@ -35,6 +38,12 @@
       cursor: pointer;
       &:hover {
         color: colors.$primary;
+      }
+      & svg {
+        font-size: 1.3rem;
+        @include breakpoints.medium {
+          font-size: 1rem;
+        }
       }
     }
   }
