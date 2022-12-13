@@ -35,6 +35,9 @@
       @include utilities.flexbox-params(flex, auto, auto);
       gap: 3%;
       margin-top: 1rem;
+      & > a {
+        width: 100%;
+      }
       @include breakpoints.medium {
         flex-direction: column;
         gap: 0.8rem;
@@ -55,8 +58,13 @@
       flex-direction: column;
       transition: 0.4s;
       cursor: pointer;
-      &:hover {
-        color: colors.$primary;
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$primary;
+        }
+      }
+      &:active {
+        color: #{colors.$primary}#{"30"};
       }
     }
   }

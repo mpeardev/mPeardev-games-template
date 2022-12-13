@@ -2,12 +2,14 @@ import games from "/public/json/games.json";
 import classes from "./games-view.module.scss";
 import {
   PageContainer,
-  DefaultGradient,
+  LinearGradient,
+  RadialGradient,
   Content,
   Title,
   SecondaryTitle,
   Subtitle,
   PrimaryButton,
+  TableGame,
 } from "../..";
 
 export function GamesView({ breakpoint }) {
@@ -35,7 +37,8 @@ export function GamesView({ breakpoint }) {
                     right: imagePosition === "right" ? 0 : "auto",
                   }}
                 >
-                  <DefaultGradient />
+                  <LinearGradient />
+                  <RadialGradient />
                 </div>
                 <div className={classes.games__content}>
                   <Content>
@@ -62,41 +65,10 @@ export function GamesView({ breakpoint }) {
                           </div>
                           <div>
                             <Subtitle subtitle={"instrucciones"} />
-                            <div className={classes.games__table}>
-                              {instructions.map(({ instruction, number }) => {
-                                return (
-                                  <div key={number}>
-                                    <h5>#{number}</h5>
-                                    <p>{instruction}</p>
-                                  </div>
-                                );
-                              })}
-
-                              <div
-                                className={classes.games__tableMode}
-                                style={{
-                                  gridTemplateColumns:
-                                    mode === "multijugador"
-                                      ? "repeat(2, 1fr)"
-                                      : "1fr",
-                                }}
-                              >
-                                <h5>Modo de juego</h5>
-                                <div>
-                                  <img src="/solo.png" alt="solo" />
-                                  <p>solo</p>
-                                </div>
-                                {mode === "multijugador" && (
-                                  <div>
-                                    <img
-                                      src="/multijugador.png"
-                                      alt="multijugador"
-                                    />
-                                    <p>multijugador</p>
-                                  </div>
-                                )}
-                              </div>
-                            </div>
+                            <TableGame
+                              instructions={instructions}
+                              mode={mode}
+                            />
                           </div>
                           <div className={classes.games__textButton}>
                             <PrimaryButton

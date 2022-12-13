@@ -48,8 +48,13 @@
       cursor: pointer;
       transition: 0.4s;
       font-family: typography.$secondary10;
-      &:hover {
-        color: colors.$primary;
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$primary;
+        }
+      }
+      &:active {
+        color: #{colors.$primary}#{"30"};
       }
       @include breakpoints.medium {
         font-size: 45px;
@@ -68,12 +73,16 @@
   &__menuicon {
     transition: 0.4s;
     cursor: pointer;
-    &:hover {
-      color: colors.$primary;
+    @media (hover: hover) {
+      &:hover {
+        color: colors.$primary;
+      }
+    }
+    &:active {
+      color: #{colors.$primary}#{"30"};
     }
     @include breakpoints.medium {
       margin-left: 2rem;
-      // color: #000000ce;
     }
   }
 }

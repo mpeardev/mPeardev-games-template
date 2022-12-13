@@ -10,10 +10,10 @@ export function App() {
     breakpointObserver(breakpoints, isBreakpoint);
   }, [breakpoint]);
   return (
-    <div style={{ position: "relative" }}>
+    <>
       <Header breakpoint={breakpoint} />
       <HomePage breakpoint={breakpoint} />
       <Footer />
-    </div>
+    </>
   );
 }

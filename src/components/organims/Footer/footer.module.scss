@@ -7,6 +7,9 @@
   padding: 3rem 0;
   @include utilities.flexbox-params(flex, center, space);
   flex-direction: column;
+  @include breakpoints.medium {
+    padding: 1.5rem 0;
+  }
   & img {
     width: 8rem;
     @include breakpoints.medium {
@@ -33,11 +36,17 @@
   &__networks {
     @include utilities.flexbox-params(flex, auto, auto);
     gap: 0.7rem;
-    & > div {
+    & > a {
+      color: colors.$text;
       transition: 0.4s;
       cursor: pointer;
-      &:hover {
-        color: colors.$primary;
+      @media (hover: hover) {
+        &:hover {
+          color: colors.$primary;
+        }
+      }
+      &:active {
+        color: #{colors.$primary}#{"30"};
       }
       & svg {
         font-size: 1.3rem;
