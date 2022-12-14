@@ -4,6 +4,7 @@ export * from "./containers/PageContainer";
 export * from "./containers/GamesView/GamesView";
 export * from "./containers/gradients/LinearGradient";
 export * from "./containers/gradients/RadialGradient";
+export * from "./containers/modals/LoginModal";
 
 /* ATOMS */
 export * from "./atoms/titles/Title";
@@ -15,6 +16,7 @@ export * from "./atoms/header/LogoHeader";
 export * from "./atoms/header/LinksHeader";
 export * from "./atoms/header/MenuIconHeader";
 export * from "./atoms/home/ArrowHome";
+export * from "./atoms/header/SessionProfile";
 
 /* MOLECULES */
 export * from "./molecules/header/ProfileHeader";

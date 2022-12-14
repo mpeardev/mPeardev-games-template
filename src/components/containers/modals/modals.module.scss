@@ -1,0 +1,23 @@
+@use "/src/styles/base/colors" as colors;
+@use "/src/styles/base/utilities" as utilities;
+
+.modal {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  background: #{colors.$secondary}#{"90"};
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  display: none;
+  &__container {
+    position: relative;
+  }
+}
+
+.modal.isOpen {
+  display: flex;
+}

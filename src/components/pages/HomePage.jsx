@@ -1,4 +1,4 @@
-import { Home, GamesView } from "..";
+import { Home, GamesView, LoginModal } from "..";
 
 export function HomePage({ breakpoint }) {
   const container = {
@@ -10,6 +10,7 @@ export function HomePage({ breakpoint }) {
     <div style={container}>
       <Home breakpoint={breakpoint} />
       <GamesView breakpoint={breakpoint} />
+      <LoginModal />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import classes from "./header.module.scss";
 import colors from "./header.module.scss";
 import {
@@ -7,7 +8,10 @@ import {
   ProfileHeader,
   MenuIconHeader,
 } from "../..";
-import { useEffect, useState } from "react";
+import {
+  enableScroll,
+  disableScroll,
+} from "../../../utils/enableDisableScroll";
 
 export function Header({ breakpoint }) {
   const [show, setShow] = useState();
@@ -17,20 +21,23 @@ export function Header({ breakpoint }) {
   let scrollInitialPosition = window.scrollY;
 
   useEffect(() => {
-    // To Show Header
-    window.addEventListener("scroll", () => {
+    // Initial Header Position
+    if (scrollInitialPosition >= 80 && breakpoint <= 640) {
+      setFixedHeader(true);
+    }
+
+    window.onscroll = () => {
       let scroll = scrollInitialPosition;
 
+      // To Show Header
       scroll = window.scrollY;
       if (scroll >= 80) {
         setFixedHeader(true);
       } else if (scroll < 80) {
         setFixedHeader(false);
       }
-    });
 
-    // To Hide Header
-    window.onscroll = () => {
+      // To Hide Header
       if (document.body.getBoundingClientRect().top > scrollInitialPosition) {
         setHidenHeader(true);
       } else if (
@@ -40,13 +47,13 @@ export function Header({ breakpoint }) {
       }
       scrollInitialPosition = document.body.getBoundingClientRect().top;
     };
+    // });
   }, []);
 
   useEffect(() => {
-    if (scrollInitialPosition >= 80 && breakpoint <= 640) {
-      setFixedHeader(true);
-    }
-  }, []);
+    if (show) disableScroll();
+    else enableScroll();
+  }, [show]);
 
   useEffect(() => {
     if (breakpoint > 640) {
@@ -69,7 +76,7 @@ export function Header({ breakpoint }) {
           : "none",
         backdropFilter: fixedHeader ? "blur(4px)" : "none",
         position: fixedHeader || show ? "fixed" : "absolute",
-        top: fixedHeader && hidenHeader ? "-10%" : "0",
+        top: show ? "0" : fixedHeader && hidenHeader ? "-10%" : "0",
       }}
     >
       <Content>

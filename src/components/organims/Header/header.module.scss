@@ -12,28 +12,25 @@
     width: 100%;
     height: 5rem;
     @include utilities.flexbox-params(flex, center, space-between);
-    @include breakpoints.xl-large {
-      height: 5rem;
-    }
     @include breakpoints.medium {
-      height: 5rem;
-      @include utilities.grid-params(grid, 1fr 0.9fr 0.1fr, auto, auto);
+      @include utilities.grid-params(grid, 0.4fr 1.5fr 0.1fr, auto, auto);
     }
   }
   &__links {
     list-style: none;
     padding: 0;
+    text-transform: capitalize;
     & > div {
       @include utilities.flexbox-params(flex, center, auto);
       gap: 2rem;
     }
     @include breakpoints.medium {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
       width: 100%;
       height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
       background: colors.$secondary;
       transition: 1s;
       @include utilities.flexbox-params(flex, center, center);
@@ -70,6 +67,43 @@
       width: auto;
     }
   }
+  &__session {
+    cursor: pointer;
+    @include utilities.flexbox-params(flex, center, center);
+    gap: 0.5rem;
+    &Img {
+      width: 2.5rem;
+      height: 2.5rem;
+      position: relative;
+      overflow: hidden;
+      @include breakpoints.medium {
+        width: 2rem;
+        height: 2rem;
+      }
+      & > img {
+        width: 100%;
+        border-radius: 50%;
+        border: 2px solid colors.$primary;
+      }
+    }
+    &Main {
+      @include breakpoints.x-small {
+        display: none;
+      }
+      & > h6 {
+        font-size: 14px;
+        @include breakpoints.medium {
+          font-size: 11px;
+        }
+      }
+      & > P {
+        font-size: 12px;
+        @include breakpoints.medium {
+          font-size: 9px;
+        }
+      }
+    }
+  }
   &__menuicon {
     transition: 0.4s;
     cursor: pointer;
@@ -83,6 +117,9 @@
     }
     @include breakpoints.medium {
       margin-left: 2rem;
+    }
+    @include breakpoints.small {
+      margin-left: 1rem;
     }
   }
 }

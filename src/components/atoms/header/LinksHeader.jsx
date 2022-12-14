@@ -9,8 +9,8 @@ export function LinksHeader({ show }) {
       }}
     >
       <div>
-        <a>Home</a>
-        <a>Sobre</a>
+        <a>home</a>
+        <a>sobre</a>
       </div>
     </div>
   );
