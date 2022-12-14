@@ -10,7 +10,7 @@ export function HomePage({ breakpoint }) {
     <div style={container}>
       <Home breakpoint={breakpoint} />
       <GamesView breakpoint={breakpoint} />
-      <LoginModal />
+      {/* <LoginModal /> */}
     </div>
   );
 }
