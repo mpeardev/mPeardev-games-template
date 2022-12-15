@@ -1,5 +1,9 @@
 import classes from "./login.module.scss";
-import { PrimaryButton, PrimaryInput, TertiaryButton } from "../..";
+import {
+  PrimaryButton,
+  PrimaryInput,
+  TertiaryButton,
+} from "../../../components";
 import { FcGoogle } from "../../atoms/icons";
 
 export function LogIn({ setAccount, setState, closeLoginModal }) {

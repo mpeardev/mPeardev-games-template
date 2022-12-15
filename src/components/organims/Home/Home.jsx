@@ -7,7 +7,7 @@ import {
   Title,
   SecondaryTitle,
   ArrowHome,
-} from "../..";
+} from "../../../components";
 
 export function Home({ breakpoint }) {
   return (

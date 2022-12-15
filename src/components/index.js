@@ -35,6 +35,7 @@ export * from "./organims/Footer/Footer";
 export * from "./organims/Home/Home";
 export * from "./organims/Blackjack/Blackjack";
 export * from "./organims/Memory/Memory";
+export * from "./organims/About/About";
 
 /* PAGES */
 export * from "./pages/HomePage";

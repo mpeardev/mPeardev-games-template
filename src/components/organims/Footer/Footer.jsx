@@ -1,5 +1,5 @@
 import classes from "./footer.module.scss";
-import { Content } from "../..";
+import { Content } from "../../../components";
 import { BsLinkedin, BsGithub, BsWhatsapp } from "../../atoms/icons";
 
 export function Footer() {

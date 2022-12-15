@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import classes from "../../organims/Header/header.module.scss";
 
 export function LinksHeader({ show }) {
@@ -9,8 +10,18 @@ export function LinksHeader({ show }) {
       }}
     >
       <div>
-        <a>home</a>
-        <a>sobre</a>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          home
+        </NavLink>
+        <NavLink
+          to="about"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+        >
+          sobre
+        </NavLink>
       </div>
     </div>
   );

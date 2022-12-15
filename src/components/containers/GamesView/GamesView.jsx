@@ -10,7 +10,7 @@ import {
   Subtitle,
   PrimaryButton,
   TableGame,
-} from "../..";
+} from "../../../components";
 
 export function GamesView({ breakpoint }) {
   return (

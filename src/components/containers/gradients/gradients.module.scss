@@ -2,21 +2,20 @@
 
 .gradient {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   &:before {
+    position: absolute;
     content: "";
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
   }
 }
 
 .linear {
-  position: relative;
   &:before {
     background: linear-gradient(
       #{colors.$secondary}#{"f3"},

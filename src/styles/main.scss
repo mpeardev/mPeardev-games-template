@@ -2,3 +2,11 @@
 @use "./base/utilities";
 @use "./base/colors";
 @use "./base/typography";
+
+.link {
+  color: colors.$text;
+}
+.link-active {
+  color: colors.$primary;
+  font-weight: bold;
+}

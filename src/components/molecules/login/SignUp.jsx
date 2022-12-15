@@ -1,5 +1,5 @@
 import classes from "./login.module.scss";
-import { PrimaryButton, PrimaryInput } from "../..";
+import { PrimaryButton, PrimaryInput } from "../../../components";
 import { BiLeftArrow } from "../../atoms/icons";
 
 export function SignUp({ setState }) {

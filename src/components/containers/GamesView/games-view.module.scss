@@ -31,7 +31,6 @@
     min-height: 100vh;
     position: relative;
     z-index: 10;
-    padding: 5rem 0;
     @include utilities.flexbox-params(flex, center, auto);
   }
   &__text {

@@ -1,5 +1,5 @@
 import classes from "../../organims/Home/home.module.scss";
-import { SecondaryButton } from "../..";
+import { SecondaryButton } from "../../../components";
 
 export function SocialButtonsHome({ breakpoint }) {
   return (

@@ -10,7 +10,7 @@
   border-radius: 6px;
   background: transparent;
   cursor: pointer;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
   @include utilities.flexbox-params(flex, center, center);
   gap: 0.5rem;
   @media (hover: hover) {

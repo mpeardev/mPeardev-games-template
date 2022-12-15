@@ -1,6 +1,6 @@
 import { useState } from "react";
 import classes from "../../organims/Header/header.module.scss";
-import { LoginModal, PrimaryButton, SessionProfile } from "../..";
+import { LoginModal, PrimaryButton, SessionProfile } from "../../../components";
 import { useModal } from "../../../hooks/useModal";
 
 export function ProfileHeader({ breakpoint }) {

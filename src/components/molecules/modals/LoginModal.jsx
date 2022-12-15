@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { DefaultModal, LogIn, SignUp } from "../..";
+import { DefaultModal, LogIn, SignUp } from "../../../components";
 
 export function LoginModal({ isOpenLoginModal, closeLoginModal, setAccount }) {
   const [state, setState] = useState();

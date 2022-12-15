@@ -7,7 +7,7 @@ import {
   LinksHeader,
   ProfileHeader,
   MenuIconHeader,
-} from "../..";
+} from "../../../components";
 import {
   enableScroll,
   disableScroll,

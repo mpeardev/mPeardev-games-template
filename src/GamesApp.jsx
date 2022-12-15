@@ -2,8 +2,9 @@ import { useState, useEffect } from "react";
 import { breakpointObserver } from "./config/breakpoint/breakpointObserver";
 import { breakpoints } from "./config/breakpoint/breakpoints";
 import { Header, HomePage, Footer } from "./components";
+import { AppRouter } from "./routers/AppRouter";
 
-export function App() {
+export function GamesApp() {
   const [breakpoint, isBreakpoint] = useState();
 
   useEffect(() => {
@@ -12,7 +13,7 @@ export function App() {
   return (
     <>
       <Header breakpoint={breakpoint} />
-      <HomePage breakpoint={breakpoint} />
+      <AppRouter />
       <Footer />
     </>
   );
