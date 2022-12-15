@@ -20,6 +20,7 @@ export * from "./atoms/home/ArrowHome";
 export * from "./atoms/header/SessionProfile";
 export * from "./atoms/form-elemens/PrimaryInput";
 export * from "./atoms/form-elemens/PrimarySelect";
+export * from "./atoms/modals/ComingModal";
 
 /* MOLECULES */
 export * from "./molecules/header/ProfileHeader";

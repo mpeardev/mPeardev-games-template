@@ -3,7 +3,7 @@ import classes from "./modals.module.scss";
 import { TfiClose } from "../../atoms/icons";
 import { useModalSize } from "../../../hooks/useModalSize";
 
-export function DefaultModal({ children, closeModal, size, title = "title" }) {
+export function DefaultModal({ children, closeModal, size, title = "" }) {
   const disabledClose = (e) => e.stopPropagation();
 
   const { styleModal, applyModalSize } = useModalSize();

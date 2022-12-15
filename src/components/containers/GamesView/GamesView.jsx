@@ -10,9 +10,13 @@ import {
   Subtitle,
   PrimaryButton,
   TableGame,
+  ComingModal,
 } from "../../../components";
+import { useModal } from "../../../hooks/useModal";
 
 export function GamesView({ breakpoint }) {
+  const [isOpenComingModal, openComingModal, closeComingModal] = useModal();
+
   return (
     <>
       {games.map(
@@ -80,6 +84,7 @@ export function GamesView({ breakpoint }) {
                                   ? "xl"
                                   : "md"
                               }
+                              onClick={openComingModal}
                             />
                           </div>
                         </div>
@@ -91,6 +96,12 @@ export function GamesView({ breakpoint }) {
             </section>
           );
         }
+      )}
+      {isOpenComingModal && (
+        <ComingModal
+          isOpenModal={isOpenComingModal}
+          closeComingModal={closeComingModal}
+        />
       )}
     </>
   );

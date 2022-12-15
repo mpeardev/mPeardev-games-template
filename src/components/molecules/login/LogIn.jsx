@@ -6,7 +6,12 @@ import {
 } from "../../../components";
 import { FcGoogle } from "../../atoms/icons";
 
-export function LogIn({ setAccount, setState, closeLoginModal }) {
+export function LogIn({
+  setAccount,
+  setState,
+  closeLoginModal,
+  openComingModal,
+}) {
   return (
     <div className={classes.login}>
       <PrimaryInput
@@ -20,16 +25,16 @@ export function LogIn({ setAccount, setState, closeLoginModal }) {
           name={"Ingresar"}
           size={"sm"}
           onClick={() => {
-            setAccount(true);
             closeLoginModal();
+            openComingModal();
           }}
         />
         <TertiaryButton
           name={"Ingresar con Google"}
           size={"sm"}
           onClick={() => {
-            setAccount(true);
             closeLoginModal();
+            openComingModal();
           }}
         >
           <FcGoogle size="1rem" />

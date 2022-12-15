@@ -2,7 +2,7 @@ import classes from "./login.module.scss";
 import { PrimaryButton, PrimaryInput } from "../../../components";
 import { BiLeftArrow } from "../../atoms/icons";
 
-export function SignUp({ setState }) {
+export function SignUp({ setState, closeLoginModal, openComingModal }) {
   return (
     <div className={classes.login}>
       <PrimaryInput name={"correo electronico"} required />
@@ -12,7 +12,10 @@ export function SignUp({ setState }) {
         <PrimaryButton
           name={"Registrarse"}
           size={"sm"}
-          onClick={() => setState(false)}
+          onClick={() => {
+            closeLoginModal();
+            openComingModal();
+          }}
         />
       </div>
       <div
