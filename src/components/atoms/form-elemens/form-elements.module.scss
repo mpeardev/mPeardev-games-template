@@ -31,10 +31,9 @@
       outline: none;
       padding: 0.3rem 0.6rem;
       font-size: 14px;
-      color: colors.$primary;
-      // font-weight: bold;
-      font-style: italic;
+      font-weight: bold;
       &:focus {
+        color: colors.$primary;
         border-color: colors.$primary;
       }
     }
