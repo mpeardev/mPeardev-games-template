@@ -1,23 +1,33 @@
 import { useState } from "react";
 import classes from "../../organims/Header/header.module.scss";
-import { PrimaryButton, SessionProfile } from "../..";
+import { LoginModal, PrimaryButton, SessionProfile } from "../..";
+import { useModal } from "../../../hooks/useModal";
 
 export function ProfileHeader({ breakpoint }) {
   const [account, setAccount] = useState();
+  const [isOpenLoginModal, openLoginModal, closeLoginModal] = useModal();
   return (
     <div className={classes.header__profile}>
       <div>
         {!account && (
           <PrimaryButton
-            name="ingresa"
+            name="Ingresa"
             size={breakpoint <= 640 ? "sm" : "lg"}
-            onClick={() => setAccount(!account)}
+            onClick={openLoginModal}
           />
         )}
         {account && (
           <SessionProfile
             breakpoint={breakpoint}
             account={account}
+            setAccount={setAccount}
+            onClick={() => setAccount(!account)}
+          />
+        )}
+        {isOpenLoginModal && (
+          <LoginModal
+            isOpenLoginModal={isOpenLoginModal}
+            closeLoginModal={closeLoginModal}
             setAccount={setAccount}
           />
         )}

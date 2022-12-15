@@ -12,7 +12,7 @@ export function SocialButtonsHome({ breakpoint }) {
           rel="noreferrer noopener"
         >
           <SecondaryButton
-            name={"linkedIn"}
+            name={"LinkedIn"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />
         </a>
@@ -22,7 +22,7 @@ export function SocialButtonsHome({ breakpoint }) {
           rel="noreferrer noopener"
         >
           <SecondaryButton
-            name={"gitHub"}
+            name={"GitHub"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />
         </a>
@@ -32,7 +32,7 @@ export function SocialButtonsHome({ breakpoint }) {
           rel="noreferrer noopener"
         >
           <SecondaryButton
-            name={"whatsApp"}
+            name={"WhatsApp"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />
         </a>

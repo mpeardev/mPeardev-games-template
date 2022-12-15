@@ -1,0 +1,40 @@
+@use "/src/styles/base/utilities" as utilities;
+@use "/src/styles/base/colors" as colors;
+
+.login {
+  width: 100%;
+  margin-top: 1.5rem;
+  @include utilities.flexbox-params(flex, auto, auto);
+  flex-direction: column;
+  & svg {
+    margin-right: 0.5rem;
+  }
+  &__buttons {
+    margin-top: 1rem;
+    @include utilities.flexbox-params(flex, auto, auto);
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  &__action {
+    margin-top: 4rem;
+    text-align: center;
+    @include utilities.flexbox-params(flex, center, center);
+  }
+  & a,
+  &__back {
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+    @media (hover: hover) {
+      &:hover {
+        color: #{colors.$primary}#{"ae"};
+      }
+    }
+    &:active {
+      color: #{colors.$primary}#{"60"};
+    }
+  }
+  & a {
+    color: colors.$primary;
+  }
+}

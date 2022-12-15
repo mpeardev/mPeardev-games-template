@@ -1,12 +1,11 @@
-import { useRef } from "react";
 import classes from "../../organims/Home/home.module.scss";
 import colors from "../../organims/Home/home.module.scss";
 import { BiDownArrow } from "../icons";
 
-export function ArrowHome({ breakpoint }) {
+export function ArrowHome() {
   const click = () => {
     window.scrollTo({
-      top: 850,
+      top: 830,
       left: 0,
     });
   };

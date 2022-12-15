@@ -47,7 +47,6 @@ export function Header({ breakpoint }) {
       }
       scrollInitialPosition = document.body.getBoundingClientRect().top;
     };
-    // });
   }, []);
 
   useEffect(() => {

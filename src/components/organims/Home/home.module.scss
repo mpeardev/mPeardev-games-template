@@ -24,6 +24,9 @@
       width: 100%;
       max-width: 35rem;
       margin: 5rem auto 0 auto;
+      & button {
+        width: 100%;
+      }
       & p {
         font-size: 13px;
       }
