@@ -2,10 +2,10 @@ import {
   Content,
   PageContainer,
   Title,
-  SecondaryTitle,
+  SecondaryTit,
 } from "/src/ui/components";
 import { LinearGradient } from "../containers";
-import { SocialButtonsHome, ArrowHome } from "./components";
+import { SocialButtonsHome, Arrow } from "./components";
 import classes from "./home.module.scss";
 
 export function Home() {
@@ -16,14 +16,14 @@ export function Home() {
           <Content>
             <div className={classes.home__contentTitle}>
               <Title title={"juegos simples"} size={"90px"} />
-              <SecondaryTitle
+              <SecondaryTit
                 title={"explora los juegos relizados con javascript"}
               />
             </div>
             <SocialButtonsHome />
           </Content>
         </div>
-        <ArrowHome />
+        <Arrow />
         <LinearGradient />
       </PageContainer>
     </section>

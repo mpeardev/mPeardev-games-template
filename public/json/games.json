@@ -22,15 +22,15 @@
         "instruction": "Puedes darle a Detener siempre y cuando no hayas sobrepasado el marcador de 21 para probar suerte, perderás automáticamente en caso tu mano sea mayor a 21."
       }
     ],
-    "mode": "multijugador",
-    "image": "/games/blackjack.jpg",
+    "multiplayer": true,
+    "image": "/img/games/blackjack.jpg",
     "imagePosition": "left"
   },
   {
     "id": 2,
     "name": "memoria",
-    "category": "juego de mesa",
-    "description": "Memoria es un juego de mesa cuyo objetivo es encontrar los pares con la misma figura. Pon a prueba tu memoria desafiándote en este juego!",
+    "category": "puzzle",
+    "description": "Memoria es un juego de tipo puzzle cuyo objetivo es encontrar los pares con la misma figura. Pon a prueba tu memoria desafiándote en este juego!",
     "instructions": [
       {
         "number": 1,
@@ -49,8 +49,27 @@
         "instruction": "Cuando juegas solo el objetivo es obtener el menor número de movimientos, mientras que en el modo multijugador gana quien mayor número de tarjetas tiene."
       }
     ],
-    "mode": "multijugador",
-    "image": "/games/memory.jpg",
+    "multiplayer": true,
+    "image": "/img/games/memory.jpg",
     "imagePosition": "right"
+  },
+  {
+    "id": 3,
+    "name": "tic tac toe",
+    "category": "puzzle",
+    "description": "Tic tac toe es un juego de tipo puzzle cuyo objetivo es formar una fila de 03 de tu figura seleccionada antes que tu adversario. Desafía tu razonamiento con este juego!",
+    "instructions": [
+      {
+        "number": 1,
+        "instruction": "El juego es simple, selecciona tu figura para empezar el juego"
+      },
+      {
+        "number": 2,
+        "instruction": "El jugador que logre formar una fila de 03 primero gana!, Para iniciar o reiniciar una nueva partida darle al boton 'reiniciar'."
+      }
+    ],
+    "multiplayer": true,
+    "image": "/img/games/tictactoe.jpg",
+    "imagePosition": "left"
   }
 ]

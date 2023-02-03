@@ -5,13 +5,13 @@ import {
   Content,
   PageContainer,
   Title,
-  SecondaryTitle,
+  SecondaryTit,
   Subtitle,
-  PrimaryButton,
+  PrimaryBtn,
   ComingModal,
 } from "/src/ui/components";
 import { LinearGradient, RadialGradient } from "../containers";
-import { TableGame } from "./components";
+import { Table } from "./components";
 import { useModal } from "/src/hooks/useModal";
 import BreakpointContext from "/src/state/breakpoint/BreakpointContext";
 
@@ -29,7 +29,7 @@ export function Games() {
           category,
           description,
           instructions,
-          mode,
+          multiplayer,
           image,
           imagePosition,
         }) => {
@@ -62,7 +62,7 @@ export function Games() {
                     >
                       <div>
                         <div className={classes.games__textTitle}>
-                          <SecondaryTitle title={category} />
+                          <SecondaryTit title={category} />
                           <Title title={name} />
                         </div>
                         <div className={classes.games__textDescription}>
@@ -72,13 +72,13 @@ export function Games() {
                           </div>
                           <div>
                             <Subtitle subtitle={"instrucciones"} />
-                            <TableGame
+                            <Table
                               instructions={instructions}
-                              mode={mode}
+                              multiplayer={multiplayer}
                             />
                           </div>
                           <div className={classes.games__textButton}>
-                            <PrimaryButton
+                            <PrimaryBtn
                               name={`jugar ${name}`}
                               size={
                                 breakpoint <= 640

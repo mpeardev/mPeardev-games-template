@@ -2,7 +2,7 @@ import classes from "../home.module.scss";
 import colors from "../home.module.scss";
 import { BiDownArrow } from "/src/ui/icons";
 
-export function ArrowHome() {
+export function Arrow() {
   const click = () => {
     window.scrollTo({
       top: 830,

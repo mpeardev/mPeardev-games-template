@@ -1,15 +1,15 @@
 import classes from "../login.module.scss";
-import { PrimaryButton, PrimaryInput } from "/src/ui/components";
+import { PrimaryBtn, PrimaryInp } from "/src/ui/components";
 import { BiLeftArrow } from "/src/ui/icons";
 
 export function SignUp({ setState, closeLoginModal, openComingModal }) {
   return (
     <div className={classes.login}>
-      <PrimaryInput name={"correo electronico"} required />
-      <PrimaryInput name={"contraseña"} />
-      <PrimaryInput name={"repetir contraseña"} />
+      <PrimaryInp name={"correo electronico"} required />
+      <PrimaryInp name={"contraseña"} />
+      <PrimaryInp name={"repetir contraseña"} />
       <div className={classes.login__buttons}>
-        <PrimaryButton
+        <PrimaryBtn
           name={"Registrarse"}
           size={"sm"}
           onClick={() => {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import classes from "../../header.module.scss";
-import { ComingModal, LoginModal, PrimaryButton } from "/src/ui/components";
+import { ComingModal, LoginModal, PrimaryBtn } from "/src/ui/components";
 import { SessionProfile } from "..";
 import { useModal } from "../../../../../hooks/useModal";
 import { useContext } from "react";
@@ -16,7 +16,7 @@ export function Profile() {
     <div className={classes.header__profile}>
       <div>
         {!account && (
-          <PrimaryButton
+          <PrimaryBtn
             name="Ingresa"
             size={breakpoint <= 640 ? "sm" : "lg"}
             onClick={openLoginModal}

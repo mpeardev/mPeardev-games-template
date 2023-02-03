@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import classes from "./buttons.module.scss";
 import { useButtonSize } from "../../hooks/useButtonSize";
 
-export function TertiaryButton({
+export function PrimaryBtn({
   name = "name",
   size,
   onClick = () => false,
@@ -16,7 +16,7 @@ export function TertiaryButton({
 
   return (
     <button
-      className={`${classes.button} ${classes.tertiary}`}
+      className={`${classes.button} ${classes.primary}`}
       style={styleButton}
       onClick={onClick}
     >

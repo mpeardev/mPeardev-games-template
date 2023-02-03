@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import classes from "../home.module.scss";
-import { SecondaryButton } from "/src/ui/components";
+import { SecondaryBtn } from "/src/ui/components";
 import BreakpointContext from "/src/state/breakpoint/BreakpointContext";
 
 export function SocialButtonsHome() {
@@ -15,7 +15,7 @@ export function SocialButtonsHome() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <SecondaryButton
+          <SecondaryBtn
             name={"LinkedIn"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />
@@ -25,7 +25,7 @@ export function SocialButtonsHome() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <SecondaryButton
+          <SecondaryBtn
             name={"GitHub"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />
@@ -35,7 +35,7 @@ export function SocialButtonsHome() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <SecondaryButton
+          <SecondaryBtn
             name={"WhatsApp"}
             size={breakpoint <= 640 ? "sm" : "lg"}
           />

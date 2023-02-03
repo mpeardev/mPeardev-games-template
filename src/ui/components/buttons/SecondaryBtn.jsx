@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import classes from "./buttons.module.scss";
 import { useButtonSize } from "../../hooks/useButtonSize";
 
-export function PrimaryButton({
+export function SecondaryBtn({
   name = "name",
   size,
   onClick = () => false,
@@ -16,7 +16,7 @@ export function PrimaryButton({
 
   return (
     <button
-      className={`${classes.button} ${classes.primary}`}
+      className={`${classes.button} ${classes.secondary}`}
       style={styleButton}
       onClick={onClick}
     >

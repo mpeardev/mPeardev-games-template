@@ -1,2 +1,2 @@
-export * from "./ArrowHome";
-export * from "./SocialButtonsHome";
+export * from "./Arrow";
+export * from "./SocialButtons";

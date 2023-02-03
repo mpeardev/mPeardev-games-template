@@ -1,9 +1,5 @@
 import classes from "../login.module.scss";
-import {
-  PrimaryButton,
-  PrimaryInput,
-  TertiaryButton,
-} from "/src/ui/components";
+import { PrimaryBtn, PrimaryInp, TertiaryBtn } from "/src/ui/components";
 import { FcGoogle } from "/src/ui/icons";
 
 export function LogIn({
@@ -14,14 +10,14 @@ export function LogIn({
 }) {
   return (
     <div className={classes.login}>
-      <PrimaryInput
+      <PrimaryInp
         name={"correo electronico"}
         required
         // error={"message error"}
       />
-      <PrimaryInput name={"contraseña"} />
+      <PrimaryInp name={"contraseña"} />
       <div className={classes.login__buttons}>
-        <PrimaryButton
+        <PrimaryBtn
           name={"Ingresar"}
           size={"sm"}
           onClick={() => {
@@ -29,7 +25,7 @@ export function LogIn({
             openComingModal();
           }}
         />
-        <TertiaryButton
+        <TertiaryBtn
           name={"Ingresar con Google"}
           size={"sm"}
           onClick={() => {
@@ -38,7 +34,7 @@ export function LogIn({
           }}
         >
           <FcGoogle size="1rem" />
-        </TertiaryButton>
+        </TertiaryBtn>
       </div>
       <div className={classes.login__action}>
         <p>

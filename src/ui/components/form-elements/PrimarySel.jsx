@@ -1,7 +1,7 @@
 import Select from "react-select";
 import classes from "./form-elements.module.scss";
 
-export function PrimarySelect({
+export function PrimarySel({
   name = "",
   required = false,
   options = [],

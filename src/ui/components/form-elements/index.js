@@ -1,2 +1,2 @@
-export * from "./PrimaryInput";
-export * from "./PrimarySelect";
+export * from "./PrimaryInp";
+export * from "./PrimarySel";

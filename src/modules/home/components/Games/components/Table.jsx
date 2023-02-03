@@ -1,6 +1,6 @@
 import classes from "../games.module.scss";
 
-export function TableGame({ instructions, mode }) {
+export function Table({ instructions, multiplayer }) {
   return (
     <div className={classes.games__table}>
       {instructions.map(({ instruction, number }) => {
@@ -15,8 +15,7 @@ export function TableGame({ instructions, mode }) {
       <div
         className={classes.games__tableMode}
         style={{
-          gridTemplateColumns:
-            mode === "multijugador" ? "repeat(2, 1fr)" : "1fr",
+          gridTemplateColumns: multiplayer ? "repeat(2, 1fr)" : "1fr",
         }}
       >
         <h5>Modo de juego</h5>
@@ -24,7 +23,7 @@ export function TableGame({ instructions, mode }) {
           <img src="/solo.png" alt="solo" />
           <p>solo</p>
         </div>
-        {mode === "multijugador" && (
+        {multiplayer && (
           <div>
             <img src="/multijugador.png" alt="multijugador" />
             <p>multijugador</p>

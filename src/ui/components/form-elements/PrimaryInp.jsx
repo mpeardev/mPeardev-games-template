@@ -1,6 +1,6 @@
 import classes from "./form-elements.module.scss";
 
-export function PrimaryInput({
+export function PrimaryInp({
   name = "",
   type = "text",
   placeholder = "",
