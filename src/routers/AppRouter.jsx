@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
-import { AboutPage, HomePage } from "../components";
+import { HomePage } from "/src/modules/home";
+// import { AboutPage } from "/src/modules/about";
 
 export function AppRouter() {
   return (
