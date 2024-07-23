@@ -15,14 +15,7 @@ export function Logo() {
             style={{ width: "3rem" }}
           />
         )}
-        {breakpoint <= 1024 && breakpoint > 640 && (
-          <img
-            src="/img/logo/logo-notebook-dark.png"
-            alt="logo"
-            style={{ width: "7rem" }}
-          />
-        )}
-        {breakpoint >= 1280 && (
+        {breakpoint >= 641 && (
           <img
             src="/img/logo/logo-dark.png"
             alt="logo"
