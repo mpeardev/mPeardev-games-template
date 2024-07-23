@@ -5,7 +5,7 @@ import {
   SecondaryTit,
 } from "/src/ui/components";
 import { LinearGradient } from "../containers";
-import { SocialButtonsHome, Arrow } from "./components";
+import { SocialButtonsHome } from "./components";
 import classes from "./home.module.scss";
 
 export function Home() {
@@ -16,14 +16,11 @@ export function Home() {
           <Content>
             <div className={classes.home__contentTitle}>
               <Title title={"juegos simples"} size={"90px"} />
-              <SecondaryTit
-                title={"explora los juegos relizados con javascript"}
-              />
+              <SecondaryTit title={"template de juegos"} />
             </div>
             <SocialButtonsHome />
           </Content>
         </div>
-        <Arrow />
         <LinearGradient />
       </PageContainer>
     </section>

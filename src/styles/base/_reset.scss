@@ -34,16 +34,37 @@ a:visited {
 }
 
 // CUSTOM-SCROLLBAR
-body::-webkit-scrollbar {
-  width: 6px;
+@supports selector(::-webkit-scrollbar) {
+  @media (hover: hover) {
+    ::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: colors.$primary;
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+      background-color: #666;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--background-image);
+    }
+
+    ::-webkit-scrollbar-corner {
+      background: var(--background-image);
+    }
+  }
 }
-body::-webkit-scrollbar-track {
-  background: colors.$secondary;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: colors.$primary;
-  border-radius: 10px;
-}
-body::-webkit-scrollbar-button {
-  display: none;
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: colors.$primary transparent;
+    scrollbar-width: thin;
+  }
 }
